@@ -1,5 +1,5 @@
 
->This is Tom Rubin's personal homepage, developed by Github Page with Jekyll.
+This is Tom Rubin's personal homepage, developed by Github Page with Jekyll.
 
 # C++ & C
 
