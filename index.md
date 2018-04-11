@@ -1,3 +1,16 @@
 
-[模板使用说明](/src/modelUsage.md)
-[Google Analytics](/_includes/google-analytics.html)
+>This is Tom Rubin's personal homepage, developed by Github Page with Jekyll.
+
+# C++ & C
+
+# Small Wits
+
+## Git
+
+## Markdown
+
+## Jekyll
+
+# Daily Plan
+
+# About Me
