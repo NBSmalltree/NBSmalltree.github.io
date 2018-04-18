@@ -38,3 +38,5 @@ $ Jekyll serve
 **解决方法：**
 
 修改_config.yml，后面添加一行：port: 4001（数字前添加空格）
+
+
