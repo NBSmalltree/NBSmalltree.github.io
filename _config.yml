@@ -66,7 +66,7 @@ permalink: /:year/:month/:title/
 highlighter: rouge
 
 textColor: #FF0000
-cover_color: clear
+#cover_color: clear
 blog_button:
     title: 博客主页
 
