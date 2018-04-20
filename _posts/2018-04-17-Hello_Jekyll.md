@@ -2,7 +2,7 @@
 layout: post
 title: Windows配置Jekyll
 date: 2018-04-17 
-tag: Wits
+tag: wits
 ---
 
 1. 下载 [Ruby Installer on Windows](https://rubyinstaller.org/)
