@@ -20,19 +20,19 @@ tag: wits
 以下是我常使用的基本的.bat操作命令
 
   - 调用程序及其配置文件
-    - `BackgroundEstimation.exe BackgroundBuild_PoznanStreet_View5.cfg`
+`BackgroundEstimation.exe BackgroundBuild_PoznanStreet_View5.cfg`
   - 调用程序及命令行
-    - ```
-      TAppRenderer.exe -c rendering_UndoDancer.cfg ^
-      --s_0=./output/Virutal_UndoDancer_View_5.yuv ^
-      -f 5
-      ```
+```
+TAppRenderer.exe -c rendering_UndoDancer.cfg ^
+--s_0=./output/Virutal_UndoDancer_View_5.yuv ^
+-f 5
+```
   - 提示
-    - `echo PoznanStreet`
+`echo PoznanStreet`
   - 暂停，按任意键继续
-    - `pause`
+`pause`
   - 不显示指令，在指令前添加即可在cmd中直接显示运行结果(适合最终版bat，如果不加就可以看到哪一句出错了<适用于调试>)
-    - `@`
+`@`
 	
 ### bat调用bat
 
