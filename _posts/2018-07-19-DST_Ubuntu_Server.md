@@ -17,7 +17,7 @@ tags: Linux
 
 #### **FTP传输**
 
-　　主要分为两部分：Linux环境下的FTP服务器搭建 + Windows下的连接
+主要分为两部分：Linux环境下的FTP服务器搭建 + Windows下的连接
 
 ##### **Linux环境下的FTP服务器搭建**
 
@@ -95,7 +95,7 @@ sudo service vsftpd stop
 ![](/images/posts/dstserver/002.png)
 ![](/images/posts/dstserver/003.png)
 
-#### SSH连接
+#### **SSH连接**
 
 这里也分为两个部分：云服务器配置 + XShell6连接
 
@@ -119,7 +119,7 @@ sudo service vsftpd stop
 
 ![](/images/posts/dstserver/007.png)
 
-#### Linux命令
+#### **Linux命令**
 
 主要包含，删除、移动、复制、解压缩
 
@@ -131,13 +131,13 @@ sudo service vsftpd stop
 |复制|`cp [filename] [dstdirname]`|
 |解压缩|`unzip [filename]` 或 `unzip [filename] [dstdirname]`|
 
-#### Vim使用
+#### **Vim使用**
 
 区别两个模式：编辑模式和审阅模式
 
 ##### **编辑模式**
 
-　　按i进入，按Esc退出
+按i进入，按Esc退出
 
 ##### **审阅模式**
 
@@ -146,11 +146,11 @@ sudo service vsftpd stop
  - `J` 光标下移
  - `K` 光标上移
 
-　　使用感受而言还是蛮爽的
+使用感受而言还是蛮爽的
 
 ### 基础框架搭建
 
-　　主要参考[官网教程](https://forums.kleientertainment.com/topic/64441-dedicated-server-quick-setup-guide-linux/)
+主要参考[官网教程](https://forums.kleientertainment.com/topic/64441-dedicated-server-quick-setup-guide-linux/)
 
 ###### 1. 安装依赖库
 
@@ -405,7 +405,7 @@ base64 -di > ~/run_dedicated_servers.sh <<< 'IyEvYmluL2Jhc2gKCnN0ZWFtY21kX2Rpcj0
 
 ### mod的应用
 
-主要参考[1](https://www.jianshu.com/p/772ce385e7ba) [2](http://hi.ktsee.com/608.html)
+主要参考[1](https://www.jianshu.com/p/772ce385e7ba)[2](http://hi.ktsee.com/608.html)
 
 ###### 1. 创建下载Mod的脚本（实际上无法自动下载，仍未解决）
 
@@ -599,14 +599,12 @@ return {
 
 - Caves端
 
-同上操作，只是换个路径
+同上操作，只是换个路径，填入内容同上
 
 ```
 cd ~/.klei/DoNotStarveTogether/MyDediServer/Caves
 vi modoverrides.lua
 ```
-
-填入内容同上
 
 ###### 3. 上传本地mod到服务器端
 
@@ -626,7 +624,7 @@ vi modoverrides.lua
 
 ###### 1. 饥荒服务器经常会找不到列表，可以选择直连的方式
 
-在进入游戏在线登陆后，键入Alt + ~ ，进入命令控制窗口，输入
+在进入游戏在线登陆后，键入`Alt + ~` ，进入命令控制窗口，输入
 
 `c_connect("117.48.210.178", 11000)`
 
