@@ -145,7 +145,6 @@ sudo service vsftpd stop
 　　如果是32为操作系统，直接
 
 　　`sudo apt-get install libstdc++6 libgcc1 libcurl4-gnutls-dev`
-
 2. 安装steamcmd
 
 ```
@@ -156,7 +155,6 @@ tar -xvzf steamcmd_linux.tar.gz
 ```
 
 　　这边把具体的下载安装放到了.sh文件中进行，可以保证每次运行时的版本更新
-
 3. 建立地面和洞穴文件夹
 
 ```
@@ -170,7 +168,6 @@ mkdir -p ~/.klei/DoNotStarveTogether/MyDediServer/Caves
 ~/.klei/DoNotStarveTogether/MyDediServer/Master
 ~/.klei/DoNotStarveTogether/MyDediServer/Caves
 ```
-
 4. 建立自己的饥荒服务器密钥
 
 ![](/images/posts/dstserver/008.png)
@@ -187,7 +184,6 @@ mkdir -p ~/.klei/DoNotStarveTogether/MyDediServer/Caves
 ```
 echo 'YourServerTokenHere' > ~/.klei/DoNotStarveTogether/MyDediServer/cluster_token.txt
 ```
-
 5. 建立cluster.ini文件
 
 　　这个是服务器的基础配置文件，包含了名称、密码、游戏模式等参数
@@ -230,9 +226,7 @@ cluster_key = supersecretkey
 ```
 base64 -di > ~/.klei/DoNotStarveTogether/MyDediServer/cluster.ini <<< 'W0dBTUVQTEFZXQpnYW1lX21vZGUgPSBzdXJ2aXZhbAptYXhfcGxheWVycyA9IDYKcHZwID0gZmFsc2UKcGF1c2Vfd2hlbl9lbXB0eSA9IHRydWUKCgpbTkVUV09SS10KY2x1c3Rlcl9kZXNjcmlwdGlvbiA9IFRoaXMgc2VydmVyIGlzIHN1cGVyIGR1cGVyIQpjbHVzdGVyX25hbWUgPSBTdXBlciBTZXJ2ZXIKY2x1c3Rlcl9pbnRlbnRpb24gPSBjb29wZXJhdGl2ZQpjbHVzdGVyX3Bhc3N3b3JkID0gCgoKW01JU0NdCmNvbnNvbGVfZW5hYmxlZCA9IHRydWUKCgpbU0hBUkRdCnNoYXJkX2VuYWJsZWQgPSB0cnVlCmJpbmRfaXAgPSAxMjcuMC4wLjEKbWFzdGVyX2lwID0gMTI3LjAuMC4xCm1hc3Rlcl9wb3J0ID0gMTA4ODkKY2x1c3Rlcl9rZXkgPSBzdXBlcnNlY3JldGtleQo='
 ```
-
 6. 更改上述文件的服务器名称和密码
-
 7. 建立地面的server.ini
 
 　　在`~/.klei/DoNotStarveTogether/MyDediServer/Master/server.ini`内
@@ -260,7 +254,6 @@ authentication_port = 8768
 ```
 base64 -di > ~/.klei/DoNotStarveTogether/MyDediServer/Master/server.ini <<< 'W05FVFdPUktdCnNlcnZlcl9wb3J0ID0gMTEwMDAKCgpbU0hBUkRdCmlzX21hc3RlciA9IHRydWUKCgpbU1RFQU1dCm1hc3Rlcl9zZXJ2ZXJfcG9ydCA9IDI3MDE4CmF1dGhlbnRpY2F0aW9uX3BvcnQgPSA4NzY4Cg=='
 ```
-
 8. 建立洞穴的server.ini
 
 　　在`~/.klei/DoNotStarveTogether/MyDediServer/Caves/server.ini`内
@@ -289,7 +282,6 @@ authentication_port = 8769
 ```
 base64 -di > ~/.klei/DoNotStarveTogether/MyDediServer/Caves/server.ini <<< 'W05FVFdPUktdCnNlcnZlcl9wb3J0ID0gMTEwMDEKCgpbU0hBUkRdCmlzX21hc3RlciA9IGZhbHNlCm5hbWUgPSBDYXZlcwoKCltTVEVBTV0KbWFzdGVyX3NlcnZlcl9wb3J0ID0gMjcwMTkKYXV0aGVudGljYXRpb25fcG9ydCA9IDg3NjkK'
 ```
-
 9. 建立洞穴的worldgenoverride.lua
 
 　　在`~/.klei/DoNotStarveTogether/MyDediServer/Caves/worldgenoverride.lua`
@@ -310,7 +302,6 @@ return {
 ```
 base64 -di > ~/.klei/DoNotStarveTogether/MyDediServer/Caves/worldgenoverride.lua <<< 'cmV0dXJuIHsKICAgIG92ZXJyaWRlX2VuYWJsZWQgPSB0cnVlLAogICAgcHJlc2V0ID0gIkRTVF9DQVZFIiwKfQo='
 ```
-
 10. 建立运行文件
 
 　　在`~/`目录
@@ -368,11 +359,9 @@ run_shared+=(-monitor_parent_process $$)
 ```
 base64 -di > ~/run_dedicated_servers.sh <<< 'IyEvYmluL2Jhc2gKCnN0ZWFtY21kX2Rpcj0iJEhPTUUvc3RlYW1jbWQiCmluc3RhbGxfZGlyPSIkSE9NRS9kb250c3RhcnZldG9nZXRoZXJfZGVkaWNhdGVkX3NlcnZlciIKY2x1c3Rlcl9uYW1lPSJNeURlZGlTZXJ2ZXIiCmRvbnRzdGFydmVfZGlyPSIkSE9NRS8ua2xlaS9Eb05vdFN0YXJ2ZVRvZ2V0aGVyIgoKZnVuY3Rpb24gZmFpbCgpCnsKICAgICAgICBlY2hvIEVycm9yOiAiJEAiID4mMgogICAgICAgIGV4aXQgMQp9CgpmdW5jdGlvbiBjaGVja19mb3JfZmlsZSgpCnsKICAgIGlmIFsgISAtZSAiJDEiIF07IHRoZW4KICAgICAgICAgICAgZmFpbCAiTWlzc2luZyBmaWxlOiAkMSIKICAgIGZpCn0KCmNkICIkc3RlYW1jbWRfZGlyIiB8fCBmYWlsICJNaXNzaW5nICRzdGVhbWNtZF9kaXIgZGlyZWN0b3J5ISIKCmNoZWNrX2Zvcl9maWxlICJzdGVhbWNtZC5zaCIKY2hlY2tfZm9yX2ZpbGUgIiRkb250c3RhcnZlX2Rpci8kY2x1c3Rlcl9uYW1lL2NsdXN0ZXIuaW5pIgpjaGVja19mb3JfZmlsZSAiJGRvbnRzdGFydmVfZGlyLyRjbHVzdGVyX25hbWUvY2x1c3Rlcl90b2tlbi50eHQiCmNoZWNrX2Zvcl9maWxlICIkZG9udHN0YXJ2ZV9kaXIvJGNsdXN0ZXJfbmFtZS9NYXN0ZXIvc2VydmVyLmluaSIKY2hlY2tfZm9yX2ZpbGUgIiRkb250c3RhcnZlX2Rpci8kY2x1c3Rlcl9uYW1lL0NhdmVzL3NlcnZlci5pbmkiCgouL3N0ZWFtY21kLnNoICtmb3JjZV9pbnN0YWxsX2RpciAiJGluc3RhbGxfZGlyIiArbG9naW4gYW5vbnltb3VzICthcHBfdXBkYXRlIDM0MzA1MCB2YWxpZGF0ZSArcXVpdAoKY2hlY2tfZm9yX2ZpbGUgIiRpbnN0YWxsX2Rpci9iaW4iCgpjZCAiJGluc3RhbGxfZGlyL2JpbiIgfHwgZmFpbCAKCnJ1bl9zaGFyZWQ9KC4vZG9udHN0YXJ2ZV9kZWRpY2F0ZWRfc2VydmVyX251bGxyZW5kZXJlcikKcnVuX3NoYXJlZCs9KC1jb25zb2xlKQpydW5fc2hhcmVkKz0oLWNsdXN0ZXIgIiRjbHVzdGVyX25hbWUiKQpydW5fc2hhcmVkKz0oLW1vbml0b3JfcGFyZW50X3Byb2Nlc3MgJCQpCgoiJHtydW5fc2hhcmVkW0BdfSIgLXNoYXJkIENhdmVzICB8IHNlZCAncy9eL0NhdmVzOiAgLycgJgoiJHtydW5fc2hhcmVkW0BdfSIgLXNoYXJkIE1hc3RlciB8IHNlZCAncy9eL01hc3RlcjogLycKCgo='
 ```
-
 11. 赋予可执行文件权限
 
 　　`chmod u+x ~/run_dedicated_servers.sh`
-
 12. 执行
 
 　　`~/run_dedicated_servers.sh`
@@ -409,7 +398,6 @@ ServerModSetup("648064643")
 ServerModSetup("676297854")
 ServerModSetup("764204839")
 ```
-
 2. 创建Mod配置文件
 
 - Master端
@@ -587,7 +575,6 @@ vi modoverrides.lua
 ```
 
 　　填入内容同上
-
 3. 上传本地mod到服务器端
 
 　　我的windows本地，打包mods.zip
@@ -609,7 +596,6 @@ vi modoverrides.lua
 　　在进入游戏在线登陆后，键入Alt + ~ ，进入命令控制窗口，输入
 
 　　`c_connect("117.48.210.178", 11000)`
-
 2. 服务器端经常会掉，是因为饥荒联机版版本更新，只有相同版本的才可一起连接，重启服务器即可
 
 
