@@ -15,11 +15,11 @@ tags: Linux
 
 　　下文内容涉及四个基本技术，很多是我在实践过程中学习的，一并写在这里
 
-#### FTP传输
+#### **FTP传输**
 
 　　主要分为两部分：Linux环境下的FTP服务器搭建 + Windows下的连接
 
-##### Linux环境下的FTP服务器搭建
+##### **Linux环境下的FTP服务器搭建**
 
 ###### 1. 安装ftp服务器
 
@@ -36,7 +36,9 @@ tags: Linux
 ###### 4. 修改 vsftpd.conf 配置文件
 
 `sudo vim /etc/vsftpd.conf`
-修改如下
+
+修改如下:
+
 ```
 # 阻止 vsftpd 在独立模式下运行
 listen=NO                 
@@ -86,7 +88,7 @@ sudo service vsftpd stop
 
 用当前云服务器的账号密码登陆
 
-##### Windows下的连接
+##### **Windows下的连接**
 
 使用WinSCP，采用SFTP协议，并输入用户名和密码即可
 
@@ -95,15 +97,15 @@ sudo service vsftpd stop
 
 #### SSH连接
 
-　　这里也分为两个部分：云服务器配置 + XShell6连接
+这里也分为两个部分：云服务器配置 + XShell6连接
 
-##### 云服务器配置
+##### **云服务器配置**
 
 云服务器配置方面非常方便，只需根据需要点点鼠标即可，这边选择的是Ubuntu16.04 64位 默认1核2GB内存，默认用户名root，密码自己定义
 
 ![](/images/posts/dstserver/004.png)
 
-##### XShell6连接
+##### **XShell6连接**
 
 ###### 1. 填入公网ip
 
@@ -119,7 +121,7 @@ sudo service vsftpd stop
 
 #### Linux命令
 
-　　主要包含，删除、移动、复制、解压缩
+主要包含，删除、移动、复制、解压缩
 
 |功能|命令|
 |:-- |:-----|
@@ -131,18 +133,18 @@ sudo service vsftpd stop
 
 #### Vim使用
 
-　　区别两个模式：编辑模式和审阅模式
+区别两个模式：编辑模式和审阅模式
 
-##### 编辑模式
+##### **编辑模式**
 
 　　按i进入，按Esc退出
 
-##### 审阅模式
+##### **审阅模式**
 
-　　- `H` 光标左移
-　　- `L` 光标右移
-　　- `J` 光标下移
-　　- `K` 光标上移
+ - `H` 光标左移
+ - `L` 光标右移
+ - `J` 光标下移
+ - `K` 光标上移
 
 　　使用感受而言还是蛮爽的
 
@@ -154,11 +156,11 @@ sudo service vsftpd stop
 
 `sudo apt-get install libstdc++6:i386 libgcc1:i386 libcurl4-gnutls-dev:i386`
 
-　　如果没有对应版本，sudo apt-get search [libname]，找到对应版本安装
+如果没有对应版本，sudo apt-get search [libname]，找到对应版本安装
 
-　　这边选择i386系列是因为饥荒的Linux版只有32位版本，Linux下的32和64位是用i386和x86_64来区分的
+这边选择i386系列是因为饥荒的Linux版只有32位版本，Linux下的32和64位是用i386和x86_64来区分的
 
-　　如果是32为操作系统，直接
+如果是32为操作系统，直接
 
 `sudo apt-get install libstdc++6 libgcc1 libcurl4-gnutls-dev`
 
@@ -171,7 +173,8 @@ wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 tar -xvzf steamcmd_linux.tar.gz
 ```
 
-　　这边把具体的下载安装放到了.sh文件中进行，可以保证每次运行时的版本更新
+这边把具体的下载安装放到了.sh文件中进行，可以保证每次运行时的版本更新
+
 ###### 3. 建立地面和洞穴文件夹
 
 ```
@@ -179,7 +182,7 @@ mkdir -p ~/.klei/DoNotStarveTogether/MyDediServer/Master
 mkdir -p ~/.klei/DoNotStarveTogether/MyDediServer/Caves
 ```
 
-　　建成后的路径:
+建成后的路径:
 
 ```
 ~/.klei/DoNotStarveTogether/MyDediServer/Master
@@ -191,13 +194,13 @@ mkdir -p ~/.klei/DoNotStarveTogether/MyDediServer/Caves
 ![](/images/posts/dstserver/008.png)
 ![](/images/posts/dstserver/009.png)
 
-　　按`Generate Server Token`按钮，生成密钥，我这边点了两次，其实两个都是一样的，复制其中一个到`~/.klei/DoNotStarveTogether/MyDediServer/cluster_token.txt`
+按`Generate Server Token`按钮，生成密钥，我这边点了两次，其实两个都是一样的，复制其中一个到`~/.klei/DoNotStarveTogether/MyDediServer/cluster_token.txt`
 
 `vi cluster_token.txt`
 
-　　复制保存即可
+复制保存即可
 
-　　也可以使用以下命令:
+也可以使用以下命令:
 
 ```
 echo 'YourServerTokenHere' > ~/.klei/DoNotStarveTogether/MyDediServer/cluster_token.txt
@@ -205,13 +208,13 @@ echo 'YourServerTokenHere' > ~/.klei/DoNotStarveTogether/MyDediServer/cluster_to
 
 ###### 5. 建立cluster.ini文件
 
-　　这个是服务器的基础配置文件，包含了名称、密码、游戏模式等参数
+这个是服务器的基础配置文件，包含了名称、密码、游戏模式等参数
 
-　　在`~/.klei/DoNotStarveTogether/MyDediServer/cluster.ini`中
+在`~/.klei/DoNotStarveTogether/MyDediServer/cluster.ini`中
 
 `vi cluster.ini`
 
-　　输入
+输入
 
 ```
 [GAMEPLAY]
@@ -240,7 +243,7 @@ master_port = 10889
 cluster_key = supersecretkey
 ```
 
-　　也可以
+也可以
 
 ```
 base64 -di > ~/.klei/DoNotStarveTogether/MyDediServer/cluster.ini <<< 'W0dBTUVQTEFZXQpnYW1lX21vZGUgPSBzdXJ2aXZhbAptYXhfcGxheWVycyA9IDYKcHZwID0gZmFsc2UKcGF1c2Vfd2hlbl9lbXB0eSA9IHRydWUKCgpbTkVUV09SS10KY2x1c3Rlcl9kZXNjcmlwdGlvbiA9IFRoaXMgc2VydmVyIGlzIHN1cGVyIGR1cGVyIQpjbHVzdGVyX25hbWUgPSBTdXBlciBTZXJ2ZXIKY2x1c3Rlcl9pbnRlbnRpb24gPSBjb29wZXJhdGl2ZQpjbHVzdGVyX3Bhc3N3b3JkID0gCgoKW01JU0NdCmNvbnNvbGVfZW5hYmxlZCA9IHRydWUKCgpbU0hBUkRdCnNoYXJkX2VuYWJsZWQgPSB0cnVlCmJpbmRfaXAgPSAxMjcuMC4wLjEKbWFzdGVyX2lwID0gMTI3LjAuMC4xCm1hc3Rlcl9wb3J0ID0gMTA4ODkKY2x1c3Rlcl9rZXkgPSBzdXBlcnNlY3JldGtleQo='
@@ -248,13 +251,15 @@ base64 -di > ~/.klei/DoNotStarveTogether/MyDediServer/cluster.ini <<< 'W0dBTUVQT
 
 ###### 6. 更改上述文件的服务器名称和密码
 
+包含`cluster_name` 和 `cluster_password`
+
 ###### 7. 建立地面的server.ini
 
-　　在`~/.klei/DoNotStarveTogether/MyDediServer/Master/server.ini`内
+在`~/.klei/DoNotStarveTogether/MyDediServer/Master/server.ini`内
 
 `vi server.ini`
 
-　　输入
+输入
 
 ```
 [NETWORK]
@@ -270,7 +275,7 @@ master_server_port = 27018
 authentication_port = 8768
 ```
 
-　　也可以
+也可以
 
 ```
 base64 -di > ~/.klei/DoNotStarveTogether/MyDediServer/Master/server.ini <<< 'W05FVFdPUktdCnNlcnZlcl9wb3J0ID0gMTEwMDAKCgpbU0hBUkRdCmlzX21hc3RlciA9IHRydWUKCgpbU1RFQU1dCm1hc3Rlcl9zZXJ2ZXJfcG9ydCA9IDI3MDE4CmF1dGhlbnRpY2F0aW9uX3BvcnQgPSA4NzY4Cg=='
@@ -278,11 +283,11 @@ base64 -di > ~/.klei/DoNotStarveTogether/MyDediServer/Master/server.ini <<< 'W05
 
 ###### 8. 建立洞穴的server.ini
 
-　　在`~/.klei/DoNotStarveTogether/MyDediServer/Caves/server.ini`内
+在`~/.klei/DoNotStarveTogether/MyDediServer/Caves/server.ini`内
 
 `vi server.ini`
 
-　　输入
+输入
 
 ```
 [NETWORK]
@@ -299,7 +304,7 @@ master_server_port = 27019
 authentication_port = 8769
 ```
 
-　　也可以
+也可以
 
 ```
 base64 -di > ~/.klei/DoNotStarveTogether/MyDediServer/Caves/server.ini <<< 'W05FVFdPUktdCnNlcnZlcl9wb3J0ID0gMTEwMDEKCgpbU0hBUkRdCmlzX21hc3RlciA9IGZhbHNlCm5hbWUgPSBDYXZlcwoKCltTVEVBTV0KbWFzdGVyX3NlcnZlcl9wb3J0ID0gMjcwMTkKYXV0aGVudGljYXRpb25fcG9ydCA9IDg3NjkK'
@@ -307,11 +312,11 @@ base64 -di > ~/.klei/DoNotStarveTogether/MyDediServer/Caves/server.ini <<< 'W05F
 
 ###### 9. 建立洞穴的worldgenoverride.lua
 
-　　在`~/.klei/DoNotStarveTogether/MyDediServer/Caves/worldgenoverride.lua`
+在`~/.klei/DoNotStarveTogether/MyDediServer/Caves/worldgenoverride.lua`
 
 `vi worldgenoverride.lua`
 
-　　输入
+输入
 
 ```
 return {
@@ -320,7 +325,7 @@ return {
 }
 ```
 
-　　也可以
+也可以
 
 ```
 base64 -di > ~/.klei/DoNotStarveTogether/MyDediServer/Caves/worldgenoverride.lua <<< 'cmV0dXJuIHsKICAgIG92ZXJyaWRlX2VuYWJsZWQgPSB0cnVlLAogICAgcHJlc2V0ID0gIkRTVF9DQVZFIiwKfQo='
@@ -328,11 +333,11 @@ base64 -di > ~/.klei/DoNotStarveTogether/MyDediServer/Caves/worldgenoverride.lua
 
 ###### 10. 建立运行文件
 
-　　在`~/`目录
+在`~/`目录
 
 `vi run_dedicated_servers.sh`
 
-　　输入
+输入
 
 ```
 #!/bin/bash
@@ -378,7 +383,7 @@ run_shared+=(-monitor_parent_process $$)
 "${run_shared[@]}" -shard Master | sed 's/^/Master: /'
 ```
 
-　　也可以
+也可以
 
 ```
 base64 -di > ~/run_dedicated_servers.sh <<< 'IyEvYmluL2Jhc2gKCnN0ZWFtY21kX2Rpcj0iJEhPTUUvc3RlYW1jbWQiCmluc3RhbGxfZGlyPSIkSE9NRS9kb250c3RhcnZldG9nZXRoZXJfZGVkaWNhdGVkX3NlcnZlciIKY2x1c3Rlcl9uYW1lPSJNeURlZGlTZXJ2ZXIiCmRvbnRzdGFydmVfZGlyPSIkSE9NRS8ua2xlaS9Eb05vdFN0YXJ2ZVRvZ2V0aGVyIgoKZnVuY3Rpb24gZmFpbCgpCnsKICAgICAgICBlY2hvIEVycm9yOiAiJEAiID4mMgogICAgICAgIGV4aXQgMQp9CgpmdW5jdGlvbiBjaGVja19mb3JfZmlsZSgpCnsKICAgIGlmIFsgISAtZSAiJDEiIF07IHRoZW4KICAgICAgICAgICAgZmFpbCAiTWlzc2luZyBmaWxlOiAkMSIKICAgIGZpCn0KCmNkICIkc3RlYW1jbWRfZGlyIiB8fCBmYWlsICJNaXNzaW5nICRzdGVhbWNtZF9kaXIgZGlyZWN0b3J5ISIKCmNoZWNrX2Zvcl9maWxlICJzdGVhbWNtZC5zaCIKY2hlY2tfZm9yX2ZpbGUgIiRkb250c3RhcnZlX2Rpci8kY2x1c3Rlcl9uYW1lL2NsdXN0ZXIuaW5pIgpjaGVja19mb3JfZmlsZSAiJGRvbnRzdGFydmVfZGlyLyRjbHVzdGVyX25hbWUvY2x1c3Rlcl90b2tlbi50eHQiCmNoZWNrX2Zvcl9maWxlICIkZG9udHN0YXJ2ZV9kaXIvJGNsdXN0ZXJfbmFtZS9NYXN0ZXIvc2VydmVyLmluaSIKY2hlY2tfZm9yX2ZpbGUgIiRkb250c3RhcnZlX2Rpci8kY2x1c3Rlcl9uYW1lL0NhdmVzL3NlcnZlci5pbmkiCgouL3N0ZWFtY21kLnNoICtmb3JjZV9pbnN0YWxsX2RpciAiJGluc3RhbGxfZGlyIiArbG9naW4gYW5vbnltb3VzICthcHBfdXBkYXRlIDM0MzA1MCB2YWxpZGF0ZSArcXVpdAoKY2hlY2tfZm9yX2ZpbGUgIiRpbnN0YWxsX2Rpci9iaW4iCgpjZCAiJGluc3RhbGxfZGlyL2JpbiIgfHwgZmFpbCAKCnJ1bl9zaGFyZWQ9KC4vZG9udHN0YXJ2ZV9kZWRpY2F0ZWRfc2VydmVyX251bGxyZW5kZXJlcikKcnVuX3NoYXJlZCs9KC1jb25zb2xlKQpydW5fc2hhcmVkKz0oLWNsdXN0ZXIgIiRjbHVzdGVyX25hbWUiKQpydW5fc2hhcmVkKz0oLW1vbml0b3JfcGFyZW50X3Byb2Nlc3MgJCQpCgoiJHtydW5fc2hhcmVkW0BdfSIgLXNoYXJkIENhdmVzICB8IHNlZCAncy9eL0NhdmVzOiAgLycgJgoiJHtydW5fc2hhcmVkW0BdfSIgLXNoYXJkIE1hc3RlciB8IHNlZCAncy9eL01hc3RlcjogLycKCgo='
@@ -386,21 +391,21 @@ base64 -di > ~/run_dedicated_servers.sh <<< 'IyEvYmluL2Jhc2gKCnN0ZWFtY21kX2Rpcj0
 
 ###### 11. 赋予可执行文件权限
 
-　　`chmod u+x ~/run_dedicated_servers.sh`
+`chmod u+x ~/run_dedicated_servers.sh`
 
 ###### 12. 执行
 
 `~/run_dedicated_servers.sh`
 
-　　或者在`~/`目录下
+或者在`~/`目录下
 
 `./run_dedicated_servers.sh`
 
-　　**到这一步基本就可以了，除了mod以外原版的饥荒已经跑在服务器上了**
+**到这一步基本就可以了，除了mod以外原版的饥荒已经跑在服务器上了**
 
 ### mod的应用
 
-　　主要参考[1](https://www.jianshu.com/p/772ce385e7ba) [2](http://hi.ktsee.com/608.html)
+主要参考[1](https://www.jianshu.com/p/772ce385e7ba) [2](http://hi.ktsee.com/608.html)
 
 ###### 1. 创建下载Mod的脚本（实际上无法自动下载，仍未解决）
 
@@ -409,7 +414,7 @@ cd ~/.klei/DoNotStarveTogether/MyDediServer
 vi dedicated_server_mods_setup.lua
 ```
 
-　　输入:
+输入:
 
 ```
 ServerModSetup("1301033176")
@@ -434,7 +439,7 @@ cd ~/.klei/DoNotStarveTogether/MyDediServer/Master
 vi modoverrides.lua
 ```
 
-　　输入:
+输入:
 
 ```
 return {
@@ -594,34 +599,34 @@ return {
 
 - Caves端
 
-　　同上操作，只是换个路径
+同上操作，只是换个路径
 
 ```
 cd ~/.klei/DoNotStarveTogether/MyDediServer/Caves
 vi modoverrides.lua
 ```
 
-　　填入内容同上
+填入内容同上
 
 ###### 3. 上传本地mod到服务器端
 
-　　我的windows本地，打包mods.zip
+我的windows本地，打包mods.zip
 
 `F:\SteamLibrary\steamapps\common\Don't Starve Together`
 　　
-　　上传至`~/dontstarvetogether_dedicated_server`文件夹
+上传至`~/dontstarvetogether_dedicated_server`文件夹
 
-　　解压并覆盖
+解压并覆盖
 
 `unzip mods.zip`
 
-　　重新运行服务器即可
+重新运行服务器即可
 
 ### 关于其他
 
 ###### 1. 饥荒服务器经常会找不到列表，可以选择直连的方式
 
-　　在进入游戏在线登陆后，键入Alt + ~ ，进入命令控制窗口，输入
+在进入游戏在线登陆后，键入Alt + ~ ，进入命令控制窗口，输入
 
 `c_connect("117.48.210.178", 11000)`
 
