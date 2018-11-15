@@ -133,5 +133,5 @@ where the red regions represent the disocclusion regions, the blue regions repre
 
 ### 相关下载
   
-转载请注明：[汤锐彬的博客](https://nbsmalltree.github.io) » [虚拟视点绘制](https://nbsmalltree.github.io/2018/04/Online_Commit_Guide/)
+转载请注明：[汤锐彬的博客](https://nbsmalltree.github.io) » [虚拟视点绘制](https://nbsmalltree.github.io/2018/11/Virtual_View_Synthesis/)
 
