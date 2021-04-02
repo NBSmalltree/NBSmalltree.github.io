@@ -1,4 +1,11 @@
-# Mac 平台安装MySQL
+---
+layout: post
+title: Mac 平台安装MySQL
+data: 2020-04-02
+tags: Mac
+---
+
+
 
 1、下载对应安装包`mysql-8.0.23-macos10.15-x86_64.tar`
 
