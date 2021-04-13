@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mac 平台安装MySQL
-data: 2020-04-02
+data: 2021-04-02
 tags: Mac
 ---
 
@@ -78,3 +78,20 @@ sudo ./mysqladmin -u root -p password
 - 查看表空间`show databases;`
 - 使用某一表空间`usr sys`其中的sys是某一表空间
 - 查看当前表空间下的所有表`show tables;`
+
+9、问题
+
+一段时间后，如果执行mysql服务状态查询、起停时，报了这个错误
+
+```bash
+ERROR! Multiple MySQL running but PID file could not be found (33200 53254 )
+```
+
+解决办法，关闭所有的mysql进程
+
+```bash
+ps -ef | grep mysql
+kill -9 进程号
+```
+
+然后重启mysql即可
