@@ -76,8 +76,9 @@ sudo ./mysqladmin -u root -p password
 ```
 
 - 查看表空间`show databases;`
-- 使用某一表空间`usr sys`其中的sys是某一表空间
+- 使用某一表空间`use sys`其中的sys是某一表空间
 - 查看当前表空间下的所有表`show tables;`
+- 查看表结构`desc table_name `
 
 9、问题
 
@@ -95,3 +96,10 @@ kill -9 进程号
 ```
 
 然后重启mysql即可
+
+10、安装mac版navicat后，提示“已损坏，移至废纸篓”，在终端执行
+
+```bash
+sudo xattr -r -d com.apple.quarantine /Applications/Navicat\ Premium.app
+```
+
